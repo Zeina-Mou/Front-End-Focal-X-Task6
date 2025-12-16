@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaShop | Home</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <!-- Css File -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+
+</head>
+
+<body>
+    <!-- Background of floating shapes -->
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <!-- Header of the Home Page -->
+    <header>
+        <nav class="main-nav">
+            <h1 class="logo satisfy-font">NovaShop</h1>
+            <div class="nav-links">
+                <a href="admin.html" class="nav-btn satisfy-font">Product HQ</a>
+            </div>
+        </nav>
+    </header>
+    <!-- container for home page -->
+    <section class="container" id="home-page">
+        <!-- container for the searh box -->
+        <div class="controls-container">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search about product, category, brand...">
+                <button class="search-btn">Search</button>
+            </div>
+            <!-- filtering section -->
+            <div class="filters-row">
+                <!-- Filter by category -->
+                <div class="filter-group">
+                    <label>Filter By</label>
+                    <div id="categoryButtonsContainer" class="cat-buttons">
+                        <!-- Buttons will be added automatically by JS when a new category is added -->
+                    </div>
+                </div>
+                <!-- Filter by price -->
+                <div class="filter-group">
+                    <label>Sort by</label>
+                    <select id="sortOrder">
+                        <option value="default">Default Order</option>
+                        <option value="low">Lowest Price</option>
+                        <option value="high">Highest Price</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- Slider for displaying available products -->
+        <div class="slider" id="mainSlider">
+            <img id="slider-image" src="" alt="Product Image">
+            <div class="slider-info">
+                <h2 id="slider-title" class="satisfy-font">Product Title</h2>
+                <p id="slider-price">00.00 $</p>
+            </div>
+            <!-- buttons for move -->
+            <button class="slider-btn prev" id="prevBtn"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+            <button class="slider-btn next" id="nextBtn"><i class="fa-solid fa-arrow-right fa-xl"></i></button>
+        </div>
+        <!-- cards for available products -->
+        <div id="productsGrid" class="grid">
+            <!-- Cards will be added automatically by JS when a new product is added -->
+        </div>
+    </section>
+    <!-- JavaScript file -->
+    <script src="./Assets/JS/main.js"></script>
+    <!-- FontAwesome Library Link -->
+    <script src="https://kit.fontawesome.com/0e6b3a7254.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

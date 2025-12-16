@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product HQ | Admin</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <!-- Css File -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+</head>
+
+<body>
+    <!-- Background of floating shapes -->
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <!-- Header of the Admin page -->
+    <header>
+        <nav class="main-nav admin-nav">
+            <h1 class="logo satisfy-font">Product HQ</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link satisfy-font">Back To Shop</a>
+            </div>
+        </nav>
+    </header>
+    <!-- container for home page -->
+    <section class="container" id="admin-page">
+        <!-- container for form box -->
+        <div class="glass-card form-section">
+            <h2 class="satisfy-font text-center" id="formTitle">Add New / Edit Existing</h2>
+            <form id="productForm">
+                <!-- Hidden input field to obtain each product's ID -->
+                <input type="hidden" id="productId">
+                <!-- Form inputs  -->
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" id="productName" placeholder="What's the product name?" required>
+                </div>
+                <!-- Category and Price Fields -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <input type="text" id="productCategory" placeholder="Name a category" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" id="productPrice" placeholder="Product Price" required min="0" step="0.01">
+                    </div>
+                </div>
+                <!-- Image url field -->
+                <div class="form-group">
+                    <label>Image Link</label>
+                    <input type="url" id="productImage" placeholder="Paste your image link" required>
+                </div>
+                <!-- Save&Cancel Buttons -->
+                <div class="form-actions">
+                    <button type="submit" id="saveBtn" class="action-btn">Save Product</button>
+                    <button type="button" id="cancelBtn" class="cancel-btn" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <!-- Table showing available products -->
+        <div class="glass-card table-section">
+            <h2 class="satisfy-font text-center">Available Products</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PRODUCT NAME</th>
+                        <th>PRICE</th>
+                        <th>CATEGORY</th>
+                        <th>PROCEDURES</th>
+                    </tr>
+                </thead>
+                <tbody id="adminTableBody">
+                    <!-- Rows will be added here by JS-->
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <!-- JavaScript file -->
+    <script src="./Assets/JS/main.js"></script>
+</body>
+
+</html>
