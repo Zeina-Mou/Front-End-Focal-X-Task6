@@ -351,13 +351,15 @@ function renderAdminTable() {
 // Adding/Editing function
 function handleFormSubmit(e) {
   e.preventDefault();
-  //This hidden box
+  //This for hidden box
   const id = document.getElementById("productId").value;
   const name = document.getElementById("productName").value;
   const price = parseFloat(document.getElementById("productPrice").value);
-  const category = document.getElementById("productCategory").value;
   const image = document.getElementById("productImage").value;
-
+  const rawCategory = document.getElementById("productCategory").value.trim();
+  const category =
+    rawCategory.charAt(0).toUpperCase() + rawCategory.slice(1).toLowerCase();
+  
   let products = getProducts();
 
   if (id) {
